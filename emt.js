@@ -42,6 +42,11 @@
 	var pathArrow_8 = new Array();
 	var pathArrow_9 = new Array();
 	var pathArrow_10 = new Array();
+	var pathArrow_11 = new Array();
+	var pathArrow_12 = new Array();
+	var pathArrow_13 = new Array();
+	var pathArrow_14 = new Array();
+
 
         var currentFrame;
 	var arrowFrame_A  = 0;
@@ -67,6 +72,11 @@
 	var arrowFrame_H = 0;
 	var arrowFrame_I = 0;
 	var arrowFrame_J = 0;
+	var arrowFrame_K = 0;
+	var arrowFrame_L = 0;
+	var arrowFrame_M = 0;
+	var arrowFrame_N = 0;
+
 
 	function prepareArrowPath_Eliptic(centerX, centerY, r_1, r_2, rotAngle, startAngle, stopAngle) {
 		var k = 0;
@@ -217,6 +227,10 @@
                 var point_8 = pathArrow_8[arrowFrame_H++];
                 var point_9 = pathArrow_9[arrowFrame_I++];
                 var point_10 = pathArrow_10[arrowFrame_J++];
+                var point_11 = pathArrow_11[arrowFrame_K++];
+                var point_12 = pathArrow_12[arrowFrame_L++];
+                var point_13 = pathArrow_13[arrowFrame_M++];
+                var point_14 = pathArrow_14[arrowFrame_N++];
 
                 drawOtherArrow(point_1B.x-10, point_1B.y - 10);
                 drawOtherArrowReverse(point_1C.x - 10, point_1C.y - 10);
@@ -234,6 +248,10 @@
                 drawOtherArrowReverse(point_8.x, point_8.y - 7);
                 drawOtherArrowReverse(point_9.x, point_9.y - 7);
                 drawOtherArrow(point_10.x, point_10.y - 11);
+                drawOtherArrowReverse(point_11.x-5, point_11.y - 11);
+                drawOtherArrow(point_12.x-5, point_12.y - 11);
+                drawOtherArrow(point_13.x-5, point_13.y - 11);
+                drawOtherArrowReverse(point_14.x-8, point_14.y - 11);
 
 
 		drawMagnetB(700,280);
@@ -263,6 +281,18 @@
 
                 if (arrowFrame_J >= pathArrow_10.length)
                     arrowFrame_J = 0;
+
+                if (arrowFrame_K >= pathArrow_11.length)
+                    arrowFrame_K = 0;
+
+                if (arrowFrame_L >= pathArrow_12.length)
+                    arrowFrame_L = 0;
+
+                if (arrowFrame_M >= pathArrow_13.length)
+                    arrowFrame_M = 0;
+
+                if (arrowFrame_N >= pathArrow_14.length)
+                    arrowFrame_N = 0;
 
                 if (arrowFrame_CB >= pathArrow_3_B.length)
                     arrowFrame_CB = 0;
@@ -613,6 +643,10 @@
         	pathArrow_8 = prepareArrowPath_Eliptic(727, 386, 41, 80, 1.2, 0.25, 0.80).reverse();
 		pathArrow_9 = prepareArrowPath_Eliptic(725, 235, 41, 70, 1.8, 0.09, 0.79);
 		pathArrow_10 = prepareArrowPath_Eliptic(50, 397, 37, 83, 0.68, 0.42, 0.97);
+		pathArrow_11 = prepareArrowPath_Eliptic(470, 410, 50, 95, 0.52, 0.42, 0.97).reverse();
+		pathArrow_12 = prepareArrowPath_Eliptic(323, 235, 41, 70, 1.65, 0.09, 0.79).reverse();
+		pathArrow_13 = prepareArrowPath_Eliptic(327, 389, 41, 75, 1.38, 0.15, 0.80);
+		pathArrow_14 = prepareArrowPath_Eliptic(460, 226, 41, 70, 0.4, 0.09, 0.79);
 	}
 
 
